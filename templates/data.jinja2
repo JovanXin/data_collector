@@ -1,0 +1,18 @@
+{% extends "base.jinja2" %}
+{% block content %}
+    <div class="row mt-1 mx-3 ">
+        {% for number in data %}
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mt-5 px-3">
+
+                <div class="card">
+                    <img class="card-img-top" src="{{ url_for('static', filename='avatar.png')}}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ number.email }}</h4>
+                        <p class="card-text">Number from: {{ number.number_from }}</p>
+                        <p class="card-text">Number to: {{ number.number_to }}</p> 
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock content %}

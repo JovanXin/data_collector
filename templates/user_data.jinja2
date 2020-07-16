@@ -1,0 +1,9 @@
+{% extends "base.jinja2" %}
+{% block content %}
+    {% for link in data %}
+        {% for link_content in link %}
+            <h1><a href="{{ link_content }}">{{ link_content }}</a></h1>
+        {% endfor %}
+        
+    {% endfor %}
+{% endblock content %}
